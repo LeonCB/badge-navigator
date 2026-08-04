@@ -19,7 +19,7 @@
  * See README.md for the full config reference.
  */
 
-const BADGE_NAVIGATOR_VERSION = "1.0.0";
+const BADGE_NAVIGATOR_VERSION = "2026.8.2";
 
 class BadgeNavigator extends HTMLElement {
   setConfig(config) {
@@ -35,6 +35,7 @@ class BadgeNavigator extends HTMLElement {
       show_labels: false,
       active_color: "var(--primary-color)",
       inactive_color: "var(--secondary-text-color)",
+      spacing: 12,
       ...config,
     };
     this._built = false;
@@ -98,7 +99,7 @@ class BadgeNavigator extends HTMLElement {
         height: 36px;
         display: flex;
         align-items: center;
-        gap: 4px;
+        gap: ${this._config.spacing}px;
         background: var(--ha-card-background, var(--card-background-color, #fff));
         border-radius: 18px;
         padding: 0 6px;
@@ -114,6 +115,7 @@ class BadgeNavigator extends HTMLElement {
         height: 24px;
         min-width: 24px;
         padding: 0;
+        line-height: 0;
         cursor: pointer;
         border-radius: 12px;
         color: var(--badge-navigator-inactive-color);
@@ -130,9 +132,10 @@ class BadgeNavigator extends HTMLElement {
         background: color-mix(in srgb, var(--badge-navigator-active-color) 16%, transparent);
       }
       ha-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         --mdc-icon-size: 18px;
-        width: 18px;
-        height: 18px;
         pointer-events: none;
       }
       span.label {

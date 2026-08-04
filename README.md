@@ -4,8 +4,10 @@ A custom [Home Assistant](https://www.home-assistant.io/) badge that packs a who
 navigation shortcuts into **one badge**, instead of one `shortcut` badge per destination.
 The badge that matches the current view is highlighted automatically.
 
-Built because repeating  `shortcut` badges in the badge row of every view gets old fast.
-This reduces that whole block to a single line of config.
+Built because repeating 9+ `shortcut` badges (plus decorative arrow icons) in the badge row
+of every view gets old fast — this reduces that whole block to a single line of config.
+
+**Sizing:** badge height 36px, icon backgrounds 24px, icons 18x18px.
 
 ## Before / after
 
@@ -45,7 +47,7 @@ badges:
 
 1. Push this repository to your own GitHub account (public repo required for HACS).
 2. In Home Assistant: HACS → the three-dot menu (top right) → **Custom repositories**.
-3. Add this repo's URL, category **Dashboard**.
+3. Add your repo's URL, category **Dashboard**.
 4. Install **Badge navigator** from HACS, then reload your browser.
 5. HACS registers the resource for you automatically.
 
@@ -65,6 +67,7 @@ badges:
 | `show_labels`  | boolean | `false`                     | Show text labels next to the icons, not just on hover-tooltip  |
 | `active_color` | string  | `var(--primary-color)`      | Color used for the currently active destination                |
 | `inactive_color`| string | `var(--secondary-text-color)`| Color used for the other destinations                         |
+| `spacing`      | number  | `12`                         | Space in pixels between icons                                   |
 
 Each entry in `targets`:
 
@@ -110,7 +113,7 @@ badges:
         text: Agenda
 ```
 
-Since this is one badge config block, not multiple, it's small enough to copy into each
+Since this is one badge config block, not eleven, it's small enough to copy into each
 view's `badges:` list directly — no templating needed for the badge itself.
 
 ## Notes
@@ -119,6 +122,11 @@ view's `badges:` list directly — no templating needed for the badge itself.
   above the cards, same as the built-in `entity` and `shortcut` badges.
 - No visual config editor is included (YAML-only for now) — PRs welcome.
 - Tested against Home Assistant 2026.x sections-view dashboards.
+
+## Versioning
+
+Releases are tagged `yyyy.m.d` (year.month.day of the release), see [CHANGELOG.md](CHANGELOG.md).
+When you cut a GitHub release, tag it to match — HACS reads the tag as the version.
 
 ## License
 
