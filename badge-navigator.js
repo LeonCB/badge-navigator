@@ -3,7 +3,7 @@
  * A single badge that renders a compact row of navigation shortcuts
  * (e.g. to other views/dashboards), with the current view highlighted.
  *
- * https://github.com/YOUR_GITHUB_USER/lovelace-badge-navigator
+ * https://github.com/LeonCB/badge-navigator
  *
  * Usage in a view's `badges:` list:
  *
@@ -19,7 +19,7 @@
  * See README.md for the full config reference.
  */
 
-const BADGE_NAVIGATOR_VERSION = "2026.8.2";
+const BADGE_NAVIGATOR_VERSION = "2026.8.3";
 
 class BadgeNavigator extends HTMLElement {
   setConfig(config) {
@@ -33,9 +33,9 @@ class BadgeNavigator extends HTMLElement {
 
     this._config = {
       show_labels: false,
-      active_color: "var(--primary-color)",
-      inactive_color: "var(--secondary-text-color)",
-      spacing: 12,
+      active_color: "var(--state-active-color)",
+      inactive_color: "var(--primary-color)",
+      spacing: 20,
       ...config,
     };
     this._built = false;
@@ -103,7 +103,6 @@ class BadgeNavigator extends HTMLElement {
         background: var(--ha-card-background, var(--card-background-color, #fff));
         border-radius: 18px;
         padding: 0 6px;
-        border: 1px solid var(--divider-color, rgba(0, 0, 0, 0.12));
       }
       button {
         all: unset;
@@ -196,7 +195,7 @@ window.customBadges.push({
   name: "Badge navigator",
   preview: false,
   description: "A single compact badge with a row of navigation shortcuts to other views, active view highlighted.",
-  documentationURL: "https://github.com/YOUR_GITHUB_USER/lovelace-badge-navigator",
+  documentationURL: "https://github.com/LeonCB/badge-navigator",
 });
 
 console.info(`%c BADGE-NAVIGATOR %c v${BADGE_NAVIGATOR_VERSION} `, "color: white; background: #03a9f4; font-weight: 700;", "color: #03a9f4; background: transparent;");
