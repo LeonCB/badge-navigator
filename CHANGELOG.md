@@ -4,6 +4,12 @@ Versioning scheme: `yyyy.m.d` — year, month, day of the commit (not a semantic
 counter). Multiple releases on the same calendar day are not expected to occur; if they
 do, bump the day forward rather than reusing it.
 
+## 2026.8.4
+
+- Added a hover effect to the icon buttons, inspired by HA's built-in entity badges:
+  a soft color-tinted background plus a slight scale-up on hover, and a scale-down
+  on press for tactile feedback.
+
 ## 2026.8.3
 
 - Removed the border around the badge bar (bar height stays 36px).
