@@ -19,7 +19,7 @@
  * See README.md for the full config reference.
  */
 
-const BADGE_NAVIGATOR_VERSION = "2026.8.5";
+const BADGE_NAVIGATOR_VERSION = "2026.8.6";
 
 class BadgeNavigator extends HTMLElement {
   setConfig(config) {
@@ -124,20 +124,20 @@ class BadgeNavigator extends HTMLElement {
         padding: 0 8px 0 4px;
       }
       button:hover {
-        background: color-mix(in srgb, var(--badge-navigator-inactive-color) 4%, transparent);
+        background: color-mix(in srgb, var(--badge-navigator-inactive-color) 10%, transparent);
       }
       button:active {
-        background: color-mix(in srgb, var(--badge-navigator-inactive-color) 12%, transparent);
+        background: color-mix(in srgb, var(--badge-navigator-inactive-color) 22%, transparent);
       }
       button.active {
         color: var(--badge-navigator-active-color);
-        background: color-mix(in srgb, var(--badge-navigator-active-color) 16%, transparent);
+        background: color-mix(in srgb, var(--badge-navigator-active-color) 18%, transparent);
       }
       button.active:hover {
-        background: color-mix(in srgb, var(--badge-navigator-active-color) 20%, transparent);
+        background: color-mix(in srgb, var(--badge-navigator-active-color) 28%, transparent);
       }
       button.active:active {
-        background: color-mix(in srgb, var(--badge-navigator-active-color) 28%, transparent);
+        background: color-mix(in srgb, var(--badge-navigator-active-color) 38%, transparent);
       }
       ha-icon {
         display: flex;

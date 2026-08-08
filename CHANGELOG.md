@@ -4,6 +4,13 @@ Versioning scheme: `yyyy.m.d` — year, month, day of the commit (not a semantic
 counter). Multiple releases on the same calendar day are not expected to occur; if they
 do, bump the day forward rather than reusing it.
 
+## 2026.8.6
+
+- Raised the hover/press tint opacities (10%/22% inactive, 18%/28%/38% active-base/
+  hover/press) — HA's literal `ha-ripple` values (4%/12%) render through a radial
+  ripple element and read stronger in practice than the same numbers on a flat
+  `color-mix` overlay, so a flat overlay needs higher percentages to actually be visible.
+
 ## 2026.8.5
 
 - Replaced the scale-on-hover effect with a proper background hover, modeled on HA's
