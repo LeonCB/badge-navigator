@@ -4,6 +4,14 @@ Versioning scheme: `yyyy.m.d` — year, month, day of the commit (not a semantic
 counter). Multiple releases on the same calendar day are not expected to occur; if they
 do, bump the day forward rather than reusing it.
 
+## 2026.8.5
+
+- Replaced the scale-on-hover effect with a proper background hover, modeled on HA's
+  own `ha-badge` component (which uses `ha-ripple` with `--ha-ripple-hover-opacity: 0.04`
+  / `--ha-ripple-pressed-opacity: 0.12`): each icon now gets a subtle tint of its own
+  color at 4% on hover and 12% on press, layered on top of the existing 16% active-state
+  tint for the current view's icon.
+
 ## 2026.8.4
 
 - Added a hover effect to the icon buttons, inspired by HA's built-in entity badges:
