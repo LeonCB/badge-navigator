@@ -1,5 +1,6 @@
 {
   "name": "Badge navigator",
   "filename": "badge-navigator.js",
-  "render_readme": true
+  "render_readme": true,
+  "hide_default_branch": true
 }

@@ -1,8 +1,20 @@
 # Changelog
 
-Versioning scheme: `yyyy.m.d` — year, month, day of the commit (not a semantic-version
-counter). Multiple releases on the same calendar day are not expected to occur; if they
-do, bump the day forward rather than reusing it.
+Versioning scheme: `yyyy.m.n` — year, month, and a counter within that month. The
+version is taken from the GitHub release tag: publishing a release makes the workflow
+write the tag into `badge-navigator.js` and attach that file to the release.
+
+## 2026.9.1
+
+- Automatic versioning via GitHub releases; validate workflow (HACS + syntax check).
+- The stylesheet is now fixed; colors and spacing are applied as CSS variables, so a
+  config value can no longer break the CSS, and the shadow DOM is built only once.
+- Active view matching ignores a trailing slash.
+- Ctrl/Cmd-click or middle-click opens the destination in a new tab.
+- Accessibility: `aria-label` on icon-only buttons, `aria-current` on the active one,
+  visible keyboard focus, respects reduced-motion.
+- Loading the file twice (e.g. as both `/local/` and `/hacsfiles/` resource) no longer
+  throws an error.
 
 ## 2026.8.6
 

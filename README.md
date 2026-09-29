@@ -1,5 +1,7 @@
 # Badge navigator
 
+![versie](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2FLeonCB%2Fbadge-navigator%2Freleases%2Flatest&query=%24.tag_name&label=versie&color=blue)
+
 A custom [Home Assistant](https://www.home-assistant.io/) badge that packs a whole row of
 navigation shortcuts into **one badge**, instead of one `shortcut` badge per destination.
 The badge that matches the current view is highlighted automatically.
