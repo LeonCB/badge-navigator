@@ -6,6 +6,12 @@ A custom [Home Assistant](https://www.home-assistant.io/) badge that packs a who
 navigation shortcuts into **one badge**, instead of one `shortcut` badge per destination.
 The badge that matches the current view is highlighted automatically.
 
+![Badge navigator](https://raw.githubusercontent.com/LeonCB/badge-navigator/main/images/badge-navigator.png)
+
+In a dashboard's badge row, next to other badges:
+
+![Badge navigator in a badge row](https://raw.githubusercontent.com/LeonCB/badge-navigator/main/images/all-badges.png)
+
 ## Before / after
 
 ```yaml
