@@ -46,7 +46,27 @@ badges:
 
 ## Installation
 
-### Via HACS (recommended)
+Badge navigator is not in the default catalog (yet), so it is added as a **custom repository**.
+
+### Home Assistant Marketplace (Home Assistant 2026.11 and newer, recommended)
+
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=LeonCB&repository=badge-navigator&category=plugin)
+
+1. Click the button above to open the repository in **Settings → Marketplace**.
+   Adding a custom repository requires a GitHub connection in the Marketplace.
+2. Install **Badge navigator**, then reload your browser.
+3. The Marketplace registers the dashboard resource for you automatically
+   (served from `/local/community/badge-navigator/`).
+
+Already installed via HACS? It moves to the Marketplace by itself when you update
+Home Assistant to 2026.11 — no need to reinstall. Only if you load dashboard resources
+from YAML, follow the repair Home Assistant shows to update the old `/hacsfiles/` path.
+
+### HACS (Home Assistant 2026.10 and older)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=LeonCB&repository=badge-navigator&category=plugin)
+
+Or add it by hand:
 
 1. In Home Assistant: HACS → the three-dot menu (top right) → **Custom repositories**.
 2. Add `https://github.com/LeonCB/badge-navigator`, category **Dashboard**.
